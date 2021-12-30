@@ -17,6 +17,11 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
+- task: NodeTool@0
+  displayName: 'Switching Node.JS back to 12.x'
+  inputs:
+    versionSpec: '12.x'
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
